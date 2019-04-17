@@ -96,9 +96,37 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('登录成功!');
-            // 跳转到后端首页
-            this.$router.push("./index")
+            
+            // 整理数据
+            let params = {
+              username:this.myForm.username,
+              password:this.myForm.password
+            }
+            // 发送请求
+            this.req.post("/account/login",params)
+                .then(res => {
+                  // 接收数据
+                  let {code,reason,token} = res;
+                  if(code === 0){
+                    this.$message({
+                      type:'success',
+                      message:reason
+                    })
+                    // 把token写入本地local storage
+                    window.localStorage.setItem("token",token);
+                    // 跳转到后端首页
+                    this.$router.push("./index")
+                  }else if(code === 1){
+                    this.$message({
+                      type:'error',
+                      message:reason
+                    })
+                  }
+                })
+                .catch(err => {
+                  console.log(err);
+                })
+            
           } else {
             console.log('error submit!!');
             return false;

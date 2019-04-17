@@ -1,0 +1,63 @@
+// 导航菜单
+.left-nav{
+    // 标题
+    .title{
+        height:240px;
+        h3{
+            color:rgb(226, 97, 11);
+            line-height:60px;
+            margin-top: 20px;
+        }
+        .user{
+            height:100px;
+            line-height:30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding-right: 43px;
+            margin-top: 50px;
+            color:#fff;
+            a{
+                text-decoration: none;
+                color:rgb(189, 175, 175);
+            }
+        }
+    }
+
+    // 菜单栏
+    .el-aside {
+        color: #333;
+        text-align: center;
+        height: 750px;
+        .el-menu{
+            background-color: #2f2f2f;
+                .el-submenu{
+                    margin-bottom: 10px;
+                    .el-submenu__title{
+                        height:30px;
+                        line-height:30px;
+                        background-color: rgb(11, 206, 86);
+                        color:#fff;
+                        border-radius: 5px;
+                        margin-left: 10px;
+                    }
+                .el-menu--inline{
+                    .el-menu-item-group{
+                        ul{
+                            li{
+                                text-align: right;
+                                height:30px;
+                                line-height:30px;
+                                color:#ccc;
+                                border-radius: 5px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }
+
+}
