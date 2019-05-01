@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ba91b"],{3888:function(n,t,e){"use strict";e.r(t);var s=function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("div",{staticClass:"stock-add"},[n._v("\n    我是库存添加\n")])},a=[],c={},l=c,u=e("2877"),i=Object(u["a"])(l,s,a,!1,null,null,null);t["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0ba91b.bcac2f7e.js.map

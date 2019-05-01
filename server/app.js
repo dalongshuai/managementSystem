@@ -45,7 +45,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(2888,() => {
-    console.log("服务器启动成功,地址是:http://127.0.0.1:2888")
+    console.log("服务器启动成功")
 })
 
 module.exports = app;

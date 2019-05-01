@@ -19,7 +19,7 @@
             router
             >
 
-            <!-- 商品管理 -->
+            <!-- 导航菜单 -->
             <el-submenu v-for="(item,index) in menuData" :key="index" :index="index+1+''">
                 <template slot="title"><i :class="item.icon"></i>&nbsp;&nbsp;{{item.title}}</template>
                 <el-menu-item-group v-for="(item,index) in item.childMenu" :key="index">

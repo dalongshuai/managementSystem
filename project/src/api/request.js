@@ -4,10 +4,11 @@
 
 import axios from "axios";
 import qs from "qs"
+import baseurl from '../assets/js/config'
 
 // 设置服务器基本路径
-axios.defaults.baseURL = "http://192.168.7.108:2888"
-
+axios.defaults.baseURL = baseurl
+// console.log(window.g.baseURL)
 // 设置axios的请求拦截器（在发送所有请求之间 给请求头统一携带token）
 axios.interceptors.request.use(config => {
     // 获取浏览器中的token
